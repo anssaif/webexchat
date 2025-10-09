@@ -5,6 +5,7 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "ALLOW-FROM https://teams.microsoft.com"
-    Content-Security-Policy = "frame-ancestors 'self' https://teams.microsoft.com https://*.teams.microsoft.com https://*.skype.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://media.imi.chat https://*.imi.chat https://res.cdn.office.net; connect-src 'self' https://*.imi.chat wss://*.imi.chat; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src 'self' https://*.imi.chat"
+    Content-Security-Policy = "frame-ancestors 'self' https://teams.microsoft.com https://*.teams.microsoft.com https://*.skype.com; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://media.imi.chat https://*.imi.chat https://res.cdn.office.net; style-src 'self' 'unsafe-inline' https://media.imi.chat https://*.imi.chat https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-elem 'self' 'unsafe-inline' https://media.imi.chat https://*.imi.chat https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://media.imi.chat https://*.imi.chat; connect-src 'self' https://*.imi.chat wss://*.imi.chat https://teams.microsoft.com; img-src 'self' data: https: blob:; frame-src 'self' https://*.imi.chat; worker-src 'self' blob:"
     Access-Control-Allow-Origin = "*"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
