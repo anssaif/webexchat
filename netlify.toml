@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOW-FROM https://teams.microsoft.com"
+    Content-Security-Policy = "frame-ancestors 'self' https://teams.microsoft.com https://*.teams.microsoft.com https://*.skype.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://media.imi.chat https://*.imi.chat https://res.cdn.office.net; connect-src 'self' https://*.imi.chat wss://*.imi.chat; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src 'self' https://*.imi.chat"
+    Access-Control-Allow-Origin = "*"
+    X-Content-Type-Options = "nosniff"
